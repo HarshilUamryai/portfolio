@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .board {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: white;
+    transition: 0.5s;
+  }
+  
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    color: red;
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  
+  header .logo span {
+    color: orange;
+    font-size: 2em;
+  }
+  
+  header ul {
+    display: flex;
+    gap: 40px;
+  }
+  
+  header ul li {
+    list-style: none;
+  }
+  
+  header ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+  }
+  
+  .content {
+    position: relative;
+    max-width: 700px;
+  }
+  
+  .content h2 {
+    font-size: 5.5em;
+    color: #333;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+    transition: 0.5s;
+  }
+  
+  .content button {
+    position: relative;
+    background-color: orange;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .content button.chat {
+    background: transparent;
+    color: black;
+  }
+  
+  .daynight {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    transition: 0.5s;
+  }
+  
+  .daynight ion-icon:nth-child(2),
+  .board.night .daynight ion-icon:nth-child(1) {
+    display: none;
+  }
+  
+  .board.night .daynight ion-icon:nth-child(2) {
+    display: block;
+  }
+  
+  .board.night {
+    background: #333;
+  }
+  
+  .board.night .daynight {
+    color: #fff;
+    background-color: #444;
+  }
+  
+  .board.night header .logo,
+  .board.night .content h2,
+  .board.night .content p,
+  .board.night .content button.chat,
+  .board.night header ul li a {
+    color: #fff;
+  }
+  
